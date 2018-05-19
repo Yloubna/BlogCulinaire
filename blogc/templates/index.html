@@ -1,0 +1,529 @@
+{% extends 'base.html' %}
+{% load staticfiles%}
+    {% block nav %}
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="{% url 'index' %}">Blog Culinaire</a>
+          
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#services">Catégories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#portfolio">Recettes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#about">Avis</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#team">à propos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#contact">Contacte</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    {% endblock %}
+
+    {% block header %}
+    <header class="masthead">   
+    
+    <div class="container">
+        <div class="intro-text">
+              <div class="intro-lead-in">Faites comme chez vous!</div>
+              <div class="intro-heading text-uppercase">Pimp my food</div>
+            <FORM method=GET action=http://www.google.com/custom>
+                <i class="fas fa-search"></i>
+                <INPUT TYPE=text name=q size=15 maxlength=255 value="">
+                <INPUT type=submit name=sa VALUE="OK">
+                <input type=hidden name=domains value="adresse de ton site sans http://"> <br><br>
+        </div>
+    </div>
+            
+  </header>
+    {% endblock %}
+    {% block content %}
+     <!-- Services -->
+     <section id="services">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h2 class="section-heading text-uppercase">Catégories</h2>
+                  <h3 class="section-subheading text-muted">Pour une table complete.</h3>
+                </div>
+              </div>
+              <div class="row text-center">
+                <div class="col-md-4">
+                  <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-glass fa-stack-1x fa-inverse"></i>
+           
+                             </span>
+                  <h4 class="service-heading">Entrées</h4>
+                  <p class="text-muted">En cuisine, l'entrée est le plat qui précède le rôt. C'est le premier service dans un repas de type occidental spécifique de l'Europe et de l'Amérique du Sud.</p>
+                </div>
+                <div class="col-md-4">
+                  <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-utensils fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <h4 class="service-heading">Plats</h4>
+                  <p class="text-muted">En cuisine, un mets est un plat ou un aliment préparé, servi lors d'un repas. Issu du latin mittere, le « mets » indique, au Moyen Âge, le plat cuisiné, solide ou liquide, que l'on place à table.</p>
+                </div>
+                <div class="col-md-4">
+                  <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-birthday-cake fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <h4 class="service-heading">Desserts</h4>
+                  <p class="text-muted">Dans la culture occidentale moderne, le dessert est le dernier plat servi au cours d'un repas, typiquement composé d'aliments sucrés : fruits, pâtisseries, sorbets, flans, etc.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+      
+          <!-- Portfolio Grid -->
+          <section class="bg-light" id="portfolio">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h2 class="section-heading text-uppercase">Recettes</h2>
+                  <h3 class="section-subheading text-muted">Pour tous les goûts.</h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                  <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                    <div class="portfolio-hover">
+                      <div class="portfolio-hover-content">
+                        <i class="fa fa-plus fa-3x"></i>
+                      </div>
+                    </div>
+                     <img class="img-fluid" src="{% static 'img/portfolio/01-thumbnail.jpg' %}" alt="">
+                  </a>
+                  <div class="portfolio-caption">
+                    <h4>Viandes</h4>
+                    <p class="text-muted">Viande rouge et blanche</p>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                  <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+                    <div class="portfolio-hover">
+                      <div class="portfolio-hover-content">
+                        <i class="fa fa-plus fa-3x"></i>
+                      </div>
+                    </div>
+                    <img class="img-fluid" src="{% static 'img/portfolio/02-thumbnail.jpg' %} " alt="">
+                  </a>
+                  <div class="portfolio-caption">
+                    <h4>Pains</h4>
+                    <p class="text-muted">Indispensable à la table.</p>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                  <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+                    <div class="portfolio-hover">
+                      <div class="portfolio-hover-content">
+                        <i class="fa fa-plus fa-3x"></i>
+                      </div>
+                    </div>
+                    <img class="img-fluid" src="{% static 'img/portfolio/03-thumbnail.jpg' %}" alt="">
+                  </a>
+                  <div class="portfolio-caption">
+                    <h4>Mousses</h4>
+                    <p class="text-muted">De la légèreté</p>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                  <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+                    <div class="portfolio-hover">
+                      <div class="portfolio-hover-content">
+                        <i class="fa fa-plus fa-3x"></i>
+                      </div>
+                    </div>
+                    <img class="img-fluid" src="{% static 'img/portfolio/04-thumbnail.jpg' %} " alt="">
+                  </a>
+                  <div class="portfolio-caption">
+                    <h4>Pizzas</h4>
+                    <p class="text-muted">Petit voyage en Italie.</p>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                  <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+                    <div class="portfolio-hover">
+                      <div class="portfolio-hover-content">
+                        <i class="fa fa-plus fa-3x"></i>
+                      </div>
+                    </div>
+                    <img class="img-fluid" src="{% static 'img/portfolio/05-thumbnail.jpg' %} " alt="">
+                  </a>
+                  <div class="portfolio-caption">
+                    <h4>Poissons</h4>
+                    <p class="text-muted">Coté Mer</p>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                  <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+                    <div class="portfolio-hover">
+                      <div class="portfolio-hover-content">
+                        <i class="fa fa-plus fa-3x"></i>
+                      </div>
+                    </div>
+                    <img class="img-fluid" src="{% static 'img/portfolio/06-thumbnail.jpg' %} " alt="">
+                  </a>
+                  <div class="portfolio-caption">
+                    <h4>Cakes</h4>
+                    <p class="text-muted">Pour d'autre "Gateaux"</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+      
+          <!-- About -->
+          <section id="about">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h2 class="section-heading text-uppercase">Avis</h2>
+                  <h3 class="section-subheading text-muted">Votre avis compte pour nous.</h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul class="timeline">
+                    <li>
+                      <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="data:image/jpeg;base64,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" alt="">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4>Jean</h4>
+                          <h4 class="subheading">2018</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p class="text-muted">J'aime ce blog. Je ne sais pas ce que je ferais sans lui et ses super infos! Merci beaucoup!</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-inverted">
+                      <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzIXNGpMYgrzm2FrJfeEKGiMsVl9raUo44UaFjgumfxciYZYbg" alt="">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4>Anissa</h4>
+                          <h4 class="subheading">Janvier 2018</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p class="text-muted">Parfait ! Authenticité, exploration, note personnelle, raffinement! Toutes ces recettes sont savoureuses, légères(peu grasses) et variées. Elles développent un même thème, selon l' origine, remonte le temps, s'adapte à la modernité, donne des indications nutritionnelles et sont très détaillées.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="data:image/jpeg;base64,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" alt="">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4>Zakaria</h4>
+                          <h4 class="subheading">2017</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p class="text-muted">Vos recettes sont biens variées et savoureuses Elles sont de vrais joyaux!</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-inverted">
+                      <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZYfHTEQxLBLP39CT1We8jGuqTKyeOJI112MFmNPR7KjbuPddEJQ" alt="">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4>Anes</h4>
+                          <h4 class="subheading">2016</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p class="text-muted">Bonjour je suis une fan des recettes de ce blog, j'ai bcp de respect pour votre personne et de l'admiration pour votre grand coeur. Je suis diabétique et j'ajuste les recettes selon mon régime alimentaire, c'est pas tjrs gagné mais dans l'ensemble ça va aller. Merci pour tout et bonne continuation.!</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-inverted">
+                      <div class="timeline-image">
+                        <h4>Be Part
+                          <br>Of Our
+                          <br>Story!</h4>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+      
+          <!-- Team -->
+          <section class="bg-light" id="team">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h2 class="section-heading text-uppercase">A propos</h2>
+                  <h3 class="section-subheading text-muted">Petite description.</h3>
+                </div>
+              </div>
+                <div class="col-sm-6 offset-sm-3">
+                  <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="{% static 'img/team/Dounia.jpg' %} " alt="">
+                    <h4>Chikh Dounia</h4>
+                    <p class="text-muted">Admin du blog</p>
+                    <ul class="list-inline social-buttons">
+                      <li class="list-inline-item">
+                        <a href="#">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#">
+                          <i class="fa fa-linkedin"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                  <p class="large text-muted">D'origine Algerienne, je vis à Oran et suis passionnée par tout ce qui tourne autour de la cuisine. Etudiante en Informatique.Ce blog est un blog de partage.Découvrez une cuisine facile et conviviale, des recettes simple et à la portée de tous, Prenez du plaisir à cuisiner des recettes du monde. .</p>
+                </div>
+              </div>
+            </div>
+          </section>
+      
+          
+      
+          <!-- Contact -->
+          <section id="contact">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h2 class="section-heading text-uppercase">Contactez nous</h2>
+                  <br>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <form id="contactForm" name="sentMessage" novalidate>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input class="form-control" id="name" type="text" placeholder="Your Name *" required data-validation-required-message="Please enter your name.">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group">
+                          <input class="form-control" id="email" type="email" placeholder="Your Email *" required data-validation-required-message="Please enter your email address.">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group">
+                          <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required data-validation-required-message="Please enter your phone number.">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <textarea class="form-control" id="message" placeholder="Your Message *" required data-validation-required-message="Please enter a message."></textarea>
+                          <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="col-lg-12 text-center">
+                        <div id="success"></div>
+                        <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+    
+           <!-- Portfolio Modals -->
+
+    <!-- Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Viandes</h2>
+                  <p class="item-intro text-muted">Viande rouge et blanche.</p>
+                  <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/01-full.jpg' %} " alt="">
+                  <p>La viande est un aliment constitué des tissus musculaires de certains animaux, notamment les mammifères, les oiseaux, les reptiles, mais aussi certains poissons comme les requins.</p>
+                 
+                   <a href="{% url 'recettes' %}"> <button class="btn btn-primary"  type="button">
+                   See more</button> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Pains</h2>
+                  <p class="item-intro text-muted">Indispensable à la table .</p>
+                  <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/02-full.jpg' %} " alt="">
+                  <p>Le pain est l'aliment de base traditionnel de nombreuses cultures. Il est fabriqué à partir des ingrédients qui sont la farine et l'eau. Il contient généralement du sel.</p>
+                  <a href="{% url 'recettes' %}"> <button class="btn btn-primary"  type="button">
+                      See more</button> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Mousses</h2>
+                  <p class="item-intro text-muted">De la légèreté.</p>
+                  <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/03-full.jpg' %} " alt="">
+                  <p>la mousse, dont la mousse au chocolat est une préparation culinaire!</p>
+                  <a href="{% url 'recettes' %}"> <button class="btn btn-primary"  type="button">
+                      See more</button> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Pizzas</h2>
+                  <p class="item-intro text-muted">Petit voyage en Italie.</p>
+                  <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/04-full.jpg' %} " alt="">
+                  <p>La pizza est une tarte d'origine italienne, faite d'une pâte à pain étalée et de coulis de tomate, recouverte de divers ingrédients et cuite au four.</p>
+                  <a href="{% url 'recettes' %}"> <button class="btn btn-primary"  type="button">
+                      See more</button> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Poissons</h2>
+                  <p class="item-intro text-muted">coté Mer.</p>
+                  <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/05-full.jpg' %} " alt="">
+                  <p>Les poissons sont des animaux vertébrés aquatiques à branchies, pourvus de nageoires et dont le corps est le plus souvent couvert d'écailles.</p>
+                  <a href="{% url 'recettes' %}"> <button class="btn btn-primary"  type="button">
+                      See more</button> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Cakes</h2>
+                  <p class="item-intro text-muted">Pour d'autre "Gateaux".</p>
+                  <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/06-full.jpg' %}  " alt="">
+                  <p>Un gâteau est une pâtisserie préparée d'une pâte sucrée à base de farine, d'œufs et de beurre. Il doit être cuit au four, généralement dans un moule. Il peut être garni de crème, de fruits, de chocolat ou de glaçage.</p>
+                  <a href="{% url 'recettes' %}"> <button class="btn btn-primary"  type="button">
+                      See more</button> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}

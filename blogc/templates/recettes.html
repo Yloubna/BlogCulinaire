@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load staticfiles%}
+
+{% block nav %}
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top myNav" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="{% url 'index' %}">Blog Culinaire</a>
+          
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+           
+          </div>
+        </div>
+      </nav>
+{% endblock %}
+    {% block content %}
+        <!-- Recettes -->
+        {% for recette in recettes %}
+            <section class="row justify-content-around">
+            
+                <div class="col-4">
+                    <h1>{{recette.title }}</h1>
+                    <p>{{recette.content}}</p>
+                </div>
+            
+            </section>
+        {% endfor %}
+    {% endblock %}
+
+   
+
+    
